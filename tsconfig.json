@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@modules/*": ["modules/*"],
+      "@config/*": ["config/*"],
+      "@shared/*": ["shared/*"],
+      "@middlewares/*": ["server/middleware/*"]
+    }
+  },
+  "ts-node": {
+    "swc": true,
+    "moduleTypes": {
+      "CJS": "commonjs",
+      "ESM": "module"
+    }
+  }
+}
